@@ -7,25 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		556B60FF2A7127F5003D34B6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556B60FE2A7127F5003D34B6 /* DetailViewController.swift */; };
-		556F6DC82A68315E00187378 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556F6DCA2A68315E00187378 /* Main.storyboard */; };
 		55848A142A67C37700FD0D41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55848A132A67C37700FD0D41 /* AppDelegate.swift */; };
 		55848A162A67C37700FD0D41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55848A152A67C37700FD0D41 /* SceneDelegate.swift */; };
-		55848A182A67C37700FD0D41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55848A172A67C37700FD0D41 /* ViewController.swift */; };
 		55848A1D2A67C37900FD0D41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55848A1C2A67C37900FD0D41 /* Assets.xcassets */; };
 		55848A202A67C37900FD0D41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55848A1E2A67C37900FD0D41 /* LaunchScreen.storyboard */; };
+		55DA535E2AB0800400D83807 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DA535D2AB0800400D83807 /* Observable.swift */; };
+		55DA53652AB0811B00D83807 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DA53642AB0811B00D83807 /* LoginViewController.swift */; };
+		55DA53682AB0824E00D83807 /* JimmyKit in Frameworks */ = {isa = PBXBuildFile; productRef = 55DA53672AB0824E00D83807 /* JimmyKit */; };
+		55DA536B2AB0825900D83807 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 55DA536A2AB0825900D83807 /* SnapKit */; };
+		55DA536D2AB082B500D83807 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DA536C2AB082B500D83807 /* LoginView.swift */; };
+		55DA53722AB09EE400D83807 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DA53712AB09EE400D83807 /* LoginViewModel.swift */; };
+		55DA53742AB0A01A00D83807 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DA53732AB0A01A00D83807 /* String+Extension.swift */; };
+		55DA53792AB0A46C00D83807 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DA53782AB0A46C00D83807 /* NextViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		556B60FE2A7127F5003D34B6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		556F6DC92A68315E00187378 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55848A102A67C37700FD0D41 /* NetflixLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55848A132A67C37700FD0D41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55848A152A67C37700FD0D41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		55848A172A67C37700FD0D41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		55848A1C2A67C37900FD0D41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55848A1F2A67C37900FD0D41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55848A212A67C37900FD0D41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55DA535D2AB0800400D83807 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		55DA53642AB0811B00D83807 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		55DA536C2AB082B500D83807 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		55DA53712AB09EE400D83807 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		55DA53732AB0A01A00D83807 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		55DA53782AB0A46C00D83807 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55DA53682AB0824E00D83807 /* JimmyKit in Frameworks */,
+				55DA536B2AB0825900D83807 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,16 +68,67 @@
 		55848A122A67C37700FD0D41 /* NetflixLogin */ = {
 			isa = PBXGroup;
 			children = (
-				55848A132A67C37700FD0D41 /* AppDelegate.swift */,
-				55848A152A67C37700FD0D41 /* SceneDelegate.swift */,
-				55848A172A67C37700FD0D41 /* ViewController.swift */,
-				55848A1C2A67C37900FD0D41 /* Assets.xcassets */,
-				556F6DCA2A68315E00187378 /* Main.storyboard */,
-				55848A1E2A67C37900FD0D41 /* LaunchScreen.storyboard */,
-				55848A212A67C37900FD0D41 /* Info.plist */,
-				556B60FE2A7127F5003D34B6 /* DetailViewController.swift */,
+				55DA53632AB080E400D83807 /* App */,
+				55DA536E2AB083EF00D83807 /* Extension */,
+				55DA53622AB080BE00D83807 /* Helper */,
+				55DA53612AB080B800D83807 /* Model */,
+				55DA535F2AB080A900D83807 /* View */,
+				55DA53602AB080B000D83807 /* ViewModel */,
 			);
 			path = NetflixLogin;
+			sourceTree = "<group>";
+		};
+		55DA535F2AB080A900D83807 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				55DA53642AB0811B00D83807 /* LoginViewController.swift */,
+				55DA536C2AB082B500D83807 /* LoginView.swift */,
+				55DA53782AB0A46C00D83807 /* NextViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55DA53602AB080B000D83807 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				55DA53712AB09EE400D83807 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		55DA53612AB080B800D83807 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		55DA53622AB080BE00D83807 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				55DA535D2AB0800400D83807 /* Observable.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		55DA53632AB080E400D83807 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				55848A1C2A67C37900FD0D41 /* Assets.xcassets */,
+				55848A1E2A67C37900FD0D41 /* LaunchScreen.storyboard */,
+				55848A212A67C37900FD0D41 /* Info.plist */,
+				55848A132A67C37700FD0D41 /* AppDelegate.swift */,
+				55848A152A67C37700FD0D41 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		55DA536E2AB083EF00D83807 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				55DA53732AB0A01A00D83807 /* String+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +147,10 @@
 			dependencies = (
 			);
 			name = NetflixLogin;
+			packageProductDependencies = (
+				55DA53672AB0824E00D83807 /* JimmyKit */,
+				55DA536A2AB0825900D83807 /* SnapKit */,
+			);
 			productName = "SeSAC-Study2";
 			productReference = 55848A102A67C37700FD0D41 /* NetflixLogin.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +179,10 @@
 				Base,
 			);
 			mainGroup = 55848A072A67C37700FD0D41;
+			packageReferences = (
+				55DA53662AB0824E00D83807 /* XCRemoteSwiftPackageReference "JimmyKit" */,
+				55DA53692AB0825900D83807 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 55848A112A67C37700FD0D41 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,7 +197,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				556F6DC82A68315E00187378 /* Main.storyboard in Resources */,
 				55848A202A67C37900FD0D41 /* LaunchScreen.storyboard in Resources */,
 				55848A1D2A67C37900FD0D41 /* Assets.xcassets in Resources */,
 			);
@@ -141,24 +209,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55848A182A67C37700FD0D41 /* ViewController.swift in Sources */,
+				55DA53652AB0811B00D83807 /* LoginViewController.swift in Sources */,
+				55DA53742AB0A01A00D83807 /* String+Extension.swift in Sources */,
+				55DA535E2AB0800400D83807 /* Observable.swift in Sources */,
+				55DA53722AB09EE400D83807 /* LoginViewModel.swift in Sources */,
 				55848A142A67C37700FD0D41 /* AppDelegate.swift in Sources */,
+				55DA536D2AB082B500D83807 /* LoginView.swift in Sources */,
+				55DA53792AB0A46C00D83807 /* NextViewController.swift in Sources */,
 				55848A162A67C37700FD0D41 /* SceneDelegate.swift in Sources */,
-				556B60FF2A7127F5003D34B6 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		556F6DCA2A68315E00187378 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				556F6DC92A68315E00187378 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		55848A1E2A67C37900FD0D41 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -293,10 +357,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VJ2VF4KUF7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SeSAC-Study2/Info.plist";
+				INFOPLIST_FILE = NetflixLogin/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -321,10 +384,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VJ2VF4KUF7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SeSAC-Study2/Info.plist";
+				INFOPLIST_FILE = NetflixLogin/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -362,6 +424,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		55DA53662AB0824E00D83807 /* XCRemoteSwiftPackageReference "JimmyKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Jimmy-Jung/JimmyKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		55DA53692AB0825900D83807 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		55DA53672AB0824E00D83807 /* JimmyKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55DA53662AB0824E00D83807 /* XCRemoteSwiftPackageReference "JimmyKit" */;
+			productName = JimmyKit;
+		};
+		55DA536A2AB0825900D83807 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55DA53692AB0825900D83807 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 55848A082A67C37700FD0D41 /* Project object */;
 }
