@@ -15,7 +15,6 @@ final class Observable<T> {
         }
     }
     
-    // 초기화 할 때는 didSet이 실행되지 않는다. 메모리에 단순 올라가기만 하기 때문
     init(_ value: T) {
         self.value = value
     }

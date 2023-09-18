@@ -15,8 +15,16 @@ final class LoginView: UIView {
     private lazy var stackViewCount = CGFloat(stackView.arrangedSubviews.count)
     var emailInfoLabelCenterYConstraint: Constraint?
     var passwordInfoLabelCenterYConstraint: Constraint?
+    var recommendInfoLabelCenterYConstraint: Constraint?
     let email = "Jimmy@gmail.com"
     let password = "a123456"
+    let recommend = "123456"
+    
+    private lazy var titleLabel = UILabel()
+        .text("JIMMYFLIX")
+        .textColor(.systemRed)
+        .font(.systemFont(ofSize: 40, weight: .black))
+        .textAlignment(.center)
     
     lazy var emailTextField = UITextField()
         .backgroundColor(.clear)
@@ -28,7 +36,7 @@ final class LoginView: UIView {
     
     lazy var emailInfoLabel = UILabel()
         .text("이메일주소 또는 전화번호")
-        .font(.systemFont(ofSize: 18))
+        .font(.systemFont(ofSize: 14))
         .textColor(.secondaryLabel)
     
     lazy var emailTextFieldView = UIView()
@@ -48,7 +56,7 @@ final class LoginView: UIView {
     
     lazy var passwordInfoLabel = UILabel()
         .text("비밀번호")
-        .font(.systemFont(ofSize: 18))
+        .font(.systemFont(ofSize: 14))
         .textColor(.secondaryLabel)
     
     lazy var passwordSecureButton = UIButton(configuration: .plain())
@@ -63,6 +71,25 @@ final class LoginView: UIView {
         .addSubView(passwordInfoLabel)
         .addSubView(passwordSecureButton)
     
+    lazy var recommendTextField = UITextField()
+        .backgroundColor(.clear)
+        .textColor(.label)
+        .autocorrectionType(.no)
+        .autocapitalizationType(.none)
+        .spellCheckingType(.no)
+        .keyboardType(.numberPad)
+    
+    lazy var recommendInfoLabel = UILabel()
+        .text("추천 코드 입력")
+        .font(.systemFont(ofSize: 14))
+        .textColor(.secondaryLabel)
+    
+    lazy var recommendTextFieldView = UIView()
+        .backgroundColor(.secondarySystemFill)
+        .cornerRadius(5)
+        .clipsToBounds(true)
+        .addSubView(recommendInfoLabel)
+        .addSubView(recommendTextField)
     
     lazy var loginButton = UIButton(configuration: .filled())
         .cornerStyle(.medium)
@@ -94,20 +121,29 @@ final class LoginView: UIView {
         .textColor(.secondaryLabel)
         .textAlignment(.center)
     
+    lazy var defaultRecommendLabel = UILabel()
+        .text("Recommend: \(recommend)")
+        .font(.systemFont(ofSize: 18, weight: .medium))
+        .textColor(.secondaryLabel)
+        .textAlignment(.center)
+    
     lazy var stackView: UIStackView = UIStackView()
         .spacing(18)
         .axis(.vertical)
         .distribution(.fillEqually)
         .alignment(.fill)
+        .addArrangedSubview(titleLabel)
+        .addArrangedSubview(UIView())
+        .addArrangedSubview(UIView())
         .addArrangedSubview(emailTextFieldView)
         .addArrangedSubview(passwordTextFieldView)
+        .addArrangedSubview(recommendTextFieldView)
         .addArrangedSubview(loginButton)
         .addArrangedSubview(joinButton)
-        .addArrangedSubview(UIView())
         .addArrangedSubview(passwordResetButton)
         .addArrangedSubview(defaultEmailLabel)
         .addArrangedSubview(defaultPasswordLabel)
-    
+        .addArrangedSubview(defaultRecommendLabel)
     
     
     override init(frame: CGRect) {
@@ -130,7 +166,7 @@ final class LoginView: UIView {
         emailInfoLabel.snp.makeConstraints {
             $0.leading.equalTo(emailTextFieldView).offset(8)
             $0.trailing.equalTo(emailTextFieldView).offset(-8)
-            self.emailInfoLabelCenterYConstraint =  $0.centerY.equalTo(emailTextFieldView).offset(-3).constraint
+            self.emailInfoLabelCenterYConstraint =  $0.centerY.equalTo(emailTextFieldView).constraint
         }
         
         emailTextField.snp.makeConstraints {
@@ -143,7 +179,7 @@ final class LoginView: UIView {
         passwordInfoLabel.snp.makeConstraints {
             $0.leading.equalTo(passwordTextFieldView).offset(8)
             $0.trailing.equalTo(passwordTextFieldView).offset(-8)
-            self.passwordInfoLabelCenterYConstraint = $0.centerY.equalTo(passwordTextFieldView).offset(-3).constraint
+            self.passwordInfoLabelCenterYConstraint = $0.centerY.equalTo(passwordTextFieldView).constraint
         }
         
         passwordTextField.snp.makeConstraints {
@@ -157,6 +193,19 @@ final class LoginView: UIView {
             $0.top.equalTo(passwordTextFieldView).offset(15)
             $0.bottom.equalTo(passwordTextFieldView).offset(-15)
             $0.trailing.equalTo(passwordTextFieldView).offset(-8)
+        }
+        
+        recommendInfoLabel.snp.makeConstraints {
+            $0.leading.equalTo(emailTextFieldView).offset(8)
+            $0.trailing.equalTo(emailTextFieldView).offset(-8)
+            self.recommendInfoLabelCenterYConstraint =  $0.centerY.equalTo(recommendTextFieldView).constraint
+        }
+        
+        recommendTextField.snp.makeConstraints {
+            $0.top.equalTo(recommendTextFieldView).offset(15)
+            $0.bottom.equalTo(recommendTextFieldView).offset(-2)
+            $0.leading.equalTo(recommendTextFieldView).offset(8)
+            $0.trailing.equalTo(recommendTextFieldView).offset(-8)
         }
         
         stackView.snp.makeConstraints {

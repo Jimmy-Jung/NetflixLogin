@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		555EEDBB2AB884D800114D24 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555EEDBA2AB884D800114D24 /* UIView+Extension.swift */; };
+		555EEDBD2AB884F500114D24 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555EEDBC2AB884F500114D24 /* UILabel+Extension.swift */; };
 		55848A142A67C37700FD0D41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55848A132A67C37700FD0D41 /* AppDelegate.swift */; };
 		55848A162A67C37700FD0D41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55848A152A67C37700FD0D41 /* SceneDelegate.swift */; };
 		55848A1D2A67C37900FD0D41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55848A1C2A67C37900FD0D41 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		555EEDBA2AB884D800114D24 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		555EEDBC2AB884F500114D24 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		55848A102A67C37700FD0D41 /* NetflixLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55848A132A67C37700FD0D41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55848A152A67C37700FD0D41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				55DA53732AB0A01A00D83807 /* String+Extension.swift */,
+				555EEDBA2AB884D800114D24 /* UIView+Extension.swift */,
+				555EEDBC2AB884F500114D24 /* UILabel+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -211,7 +217,9 @@
 			files = (
 				55DA53652AB0811B00D83807 /* LoginViewController.swift in Sources */,
 				55DA53742AB0A01A00D83807 /* String+Extension.swift in Sources */,
+				555EEDBD2AB884F500114D24 /* UILabel+Extension.swift in Sources */,
 				55DA535E2AB0800400D83807 /* Observable.swift in Sources */,
+				555EEDBB2AB884D800114D24 /* UIView+Extension.swift in Sources */,
 				55DA53722AB09EE400D83807 /* LoginViewModel.swift in Sources */,
 				55848A142A67C37700FD0D41 /* AppDelegate.swift in Sources */,
 				55DA536D2AB082B500D83807 /* LoginView.swift in Sources */,
