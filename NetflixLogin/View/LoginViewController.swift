@@ -27,10 +27,10 @@ final class LoginViewController: UIViewController {
     }
     
     private func setupAddTarget() {
-        loginView.emailTextField.addTarget(self, action: #selector(textFieldDidBeginEditing(_:)), for: [.editingDidBegin, .editingChanged])
-        loginView.passwordTextField.addTarget(self, action: #selector(textFieldDidBeginEditing(_:)), for: [.editingDidBegin, .editingChanged])
-        loginView.emailTextField.addTarget(self, action: #selector(textFieldDidEndEditing(_:)), for: .editingDidEnd)
-        loginView.passwordTextField.addTarget(self, action: #selector(textFieldDidEndEditing(_:)), for: .editingDidEnd)
+        [loginView.emailTextField, loginView.passwordTextField, loginView.recommendTextField].forEach {
+            $0.addTarget(self, action: #selector(textFieldDidBeginEditing(_:)), for: [.editingDidBegin, .editingChanged])
+            $0.addTarget(self, action: #selector(textFieldDidEndEditing(_:)), for: .editingDidEnd)
+        }
         loginView.loginButton.addTarget(self, action: #selector(loginButtonTapped(_:)), for: .touchUpInside)
         loginView.passwordSecureButton.addTarget(self, action: #selector(secureButtonTapped(_:)), for: .touchUpInside)
     }
@@ -43,6 +43,11 @@ final class LoginViewController: UIViewController {
         
         loginViewModel.passwordValid.bind { [unowned self] value in
             loginView.passwordInfoLabel.textColor = value ? .systemGreen : .secondaryLabel
+            loginView.loginButton.isEnabled(loginViewModel.checkBothValid())
+        }
+        
+        loginViewModel.recommendValid.bind { [unowned self] value in
+            loginView.recommendInfoLabel.textColor = value ? .systemGreen : .secondaryLabel
             loginView.loginButton.isEnabled(loginViewModel.checkBothValid())
         }
     
@@ -61,7 +66,23 @@ extension LoginViewController {
     }
     
     @objc func loginButtonTapped(_ sender: UIButton) {
-        transition(viewController: NextViewController(), style: .present)
+        let loginCheck = loginViewModel.checkLogin()
+        switch loginCheck {
+            
+        case .success(_):
+            transition(viewController: NextViewController(), style: .present)
+        case .failure(let error):
+            switch error {
+                
+            case .email:
+                self.loginView.emailInfoLabel.shakeLabel(shakeText: error.errorDescription, durationTime: 3, textWillDisappear: false)
+            case .password:
+                self.loginView.passwordInfoLabel.shakeLabel(shakeText: error.errorDescription, durationTime: 3, textWillDisappear: false)
+            case .recommend:
+                self.loginView.recommendInfoLabel.shakeLabel(shakeText: error.errorDescription, durationTime: 3, textWillDisappear: false)
+            }
+        }
+        
     }
     // MARK: - 텍스트필드 델리게이트
     //텍스트필드 편집 시작할때의 설정 - 문구가 위로올라가면서 크기 작아지고, 오토레이아웃 업데이트
@@ -83,6 +104,14 @@ extension LoginViewController {
             loginView.passwordInfoLabelCenterYConstraint?.update(offset: -13)
         }
         
+        if textField == loginView.recommendTextField {
+            loginViewModel.recommend.value = textField.text!
+            loginView.recommendTextFieldView.backgroundColor = .systemGray6
+            loginView.recommendInfoLabel.font(.systemFont(ofSize: 11))
+            // 오토레이아웃 업데이트
+            loginView.recommendInfoLabelCenterYConstraint?.update(offset: -13)
+        }
+        
         // 실제 레이아웃 변경은 애니메이션으로 줄꺼야
         UIView.animate(withDuration: 0.2) {
             self.loginView.stackView.layoutIfNeeded()
@@ -98,8 +127,8 @@ extension LoginViewController {
             loginView.emailTextFieldView.backgroundColor(.secondarySystemFill)
             // 빈칸이면 원래로 되돌리기
             if loginView.emailTextField.text == "" {
-                loginView.emailInfoLabel.font(.systemFont(ofSize: 18))
-                loginView.emailInfoLabelCenterYConstraint?.update(offset: -3)
+                loginView.emailInfoLabel.font(.systemFont(ofSize: 14))
+                loginView.emailInfoLabelCenterYConstraint?.update(offset: 0)
             }
         }
         if textField == loginView.passwordTextField {
@@ -107,8 +136,18 @@ extension LoginViewController {
             loginView.passwordTextFieldView.backgroundColor(.secondarySystemFill)
             // 빈칸이면 원래로 되돌리기
             if loginView.passwordTextField.text == "" {
-                loginView.passwordInfoLabel.font(.systemFont(ofSize: 18))
-                loginView.passwordInfoLabelCenterYConstraint?.update(offset: -3)
+                loginView.passwordInfoLabel.font(.systemFont(ofSize: 14))
+                loginView.passwordInfoLabelCenterYConstraint?.update(offset: 0)
+            }
+        }
+        
+        if textField == loginView.recommendTextField {
+            loginView.recommendInfoLabel.text = "추천 코드 입력"
+            loginView.recommendTextFieldView.backgroundColor(.secondarySystemFill)
+            // 빈칸이면 원래로 되돌리기
+            if loginView.recommendTextField.text == "" {
+                loginView.recommendInfoLabel.font(.systemFont(ofSize: 14))
+                loginView.recommendInfoLabelCenterYConstraint?.update(offset: 0)
             }
         }
         
