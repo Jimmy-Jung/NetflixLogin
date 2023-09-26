@@ -85,7 +85,7 @@ extension LoginViewController {
         
     }
     // MARK: - 텍스트필드 델리게이트
-    //텍스트필드 편집 시작할때의 설정 - 문구가 위로올라가면서 크기 작아지고, 오토레이아웃 업데이트
+    //텍스트필드 편집 시작할때의 설정 - 문구가 위로올라가면서 크기 작아지고, 오토레이아웃 업데이트.
     @objc func textFieldDidBeginEditing(_ textField: UITextField) {
         
         if textField == loginView.emailTextField {
